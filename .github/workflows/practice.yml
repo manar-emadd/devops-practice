@@ -1,6 +1,8 @@
 name: CI Practice
 
-on: push
+on: 
+  push:
+    branches: [main]
 
 jobs:
   hello:
@@ -35,3 +37,13 @@ jobs:
         env:
           MY_SECRET: ${{ secrets.MY_SECRET_MESSAGE }}
         run: echo "The Secret is:$MY_SECRET"
+  
+  matrix-demo:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        number: [1,2,3]
+    
+    steps:
+      - name: show number
+        run: echo "Running number:${{ matrix.number}}"  
