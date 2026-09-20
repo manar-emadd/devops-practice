@@ -9,3 +9,15 @@ jobs:
     steps:
       - name: print a message
         run: echo "Hello CI/CD!"
+  
+
+  deploy:
+    needs: hello
+    runs-on: self-hosted
+
+    steps:
+      - name: deploy message
+        run: echo "Deploying now!"
+    
+
+      
