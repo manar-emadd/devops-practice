@@ -47,3 +47,8 @@ jobs:
     steps:
       - name: show number
         run: echo "Running number:${{ matrix.number}}"  
+      
+      - name: spacial message
+        if: matrix.number == 2
+        run: echo "This is number 2"
+        
