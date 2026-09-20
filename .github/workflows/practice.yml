@@ -18,6 +18,17 @@ jobs:
     steps:
       - name: deploy message
         run: echo "Deploying now!"
+
+  greet:
+    runs-on: self-hosted
+
+    steps:
+      - name: greet with env variable
+        
+        env:
+          MY_NAME: Manar
+        run: echo "Hello, $MY_NAME!"
+
     
 
       
