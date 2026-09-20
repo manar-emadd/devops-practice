@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: print a message
         run: echo "Hello CI/CD!"
-  
 
   deploy:
     needs: hello
@@ -24,19 +23,15 @@ jobs:
 
     steps:
       - name: greet with env variable
-        
         env:
           MY_NAME: Manar
         run: echo "Hello, $MY_NAME!"
 
-    show_secret:
+  show_secret:
     runs-on: self-hosted
+
     steps:
       - name: print secret message
         env:
           MY_SECRET: ${{ secrets.MY_SECRET_MESSAGE }}
-        run: echo "The Secret is: $ MY_SECRET"     
-
-    
-
-      
+        run: echo "The Secret is: $MY_SECRET"
