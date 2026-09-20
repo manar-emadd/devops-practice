@@ -29,13 +29,13 @@ jobs:
           MY_NAME: Manar
         run: echo "Hello, $MY_NAME!"
 
-  show_secret:
+    show_secret:
     runs-on: self-hosted
     steps:
       - name: print secret message
         env:
-          MY_SECRET: $ {{SECRETS.MY_SECRET_MESSAGE}}  
-        run: echo "The Secret is: $MY_SECRET"      
+          MY_SECRET: ${{ secrets.MY_SECRET_MESSAGE }}
+        run: echo "The Secret is: $MY_SECRET"     
 
     
 
