@@ -35,7 +35,7 @@ jobs:
       - name: print secret message
         env:
           MY_SECRET: ${{ secrets.MY_SECRET_MESSAGE }}
-        run: echo "The Secret is: $MY_SECRET"     
+        run: echo "The Secret is: $ MY_SECRET"     
 
     
 
